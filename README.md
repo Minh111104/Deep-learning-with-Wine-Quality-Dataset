@@ -5,8 +5,9 @@ A deep learning regression model built with TensorFlow/Keras to predict wine qua
 ## Dataset
 
 - **Source:** [UCI Machine Learning Repository - Wine Quality](https://archive.ics.uci.edu/dataset/186/wine+quality)
-- **File used:** `data/winequality-red.csv` (red wine, 1,599 samples)
-- **Features:** 11 physicochemical inputs (fixed acidity, volatile acidity, citric acid, residual sugar, chlorides, free sulfur dioxide, total sulfur dioxide, density, pH, sulphates, alcohol)
+- **Files used:** `data/winequality-red.csv` (1,599 samples) + `data/winequality-white.csv` (4,898 samples)
+- **Total samples:** 6,497 (red + white combined)
+- **Features:** 12 inputs — 11 physicochemical (fixed acidity, volatile acidity, citric acid, residual sugar, chlorides, free sulfur dioxide, total sulfur dioxide, density, pH, sulphates, alcohol) + `wine_type` (0=red, 1=white)
 - **Target:** `quality` — expert rating from 0 to 10
 
 ## Project Structure
@@ -41,7 +42,7 @@ A deep learning regression model built with TensorFlow/Keras to predict wine qua
 ### 4. Build Neural Network
 
 - Keras `Sequential` model
-- Architecture: `Input(11)` → `Dense(64, ReLU)` → `Dense(32, ReLU)` → `Dense(16, ReLU)` → `Dense(1, linear)`
+- Architecture: `Input(12)` → `Dense(64, ReLU)` → `Dense(32, ReLU)` → `Dense(16, ReLU)` → `Dense(1, linear)`
 - Linear output activation for continuous regression output
 
 ### 5. Compile & Train
