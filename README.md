@@ -30,7 +30,8 @@ A deep learning regression model built with TensorFlow/Keras to predict wine qua
 ### 2. Load & Explore Data
 
 - Loaded CSV with semicolon separator
-- Confirmed no missing values (1,599 rows × 12 columns)
+- Concatenated two datasets
+- Confirmed no missing values (6,497 rows × 12 columns)
 - Plotted distribution of quality scores (most wines rated 5–6)
 
 ### 3. Preprocess
